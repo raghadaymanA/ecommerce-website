@@ -1,0 +1,160 @@
+.categoriesSection {
+  margin-top: 80px;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tag {
+  color: #DB4444;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tag::before {
+  content: '';
+  width: 20px;
+  height: 40px;
+  background: #DB4444;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.sectionTitle h2 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+.navArrows {
+  display: flex;
+  gap: 8px;
+}
+
+.navArrows button {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: #F5F5F5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  box-shadow: none;
+}
+
+.navArrows button:hover {
+  background: #DB4444;
+  color: #fff;
+}
+
+.navArrows button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.categoriesGrid {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.categoriesGrid::-webkit-scrollbar {
+  display: none;
+}
+
+.categoryCard {
+  min-width: calc((100% - 150px) / 6);
+  flex-shrink: 0;
+}
+
+.categoryCard {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s;
+  min-height: 145px;
+  background: #FFFFFF;
+}
+
+.categoryCard:hover,
+.categoryCard.active {
+  background: #DB4444;
+  color: #FAFAFA;
+  border-color: #DB4444;
+}
+
+.categoryCard p {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  color: inherit;
+}
+
+.sectionDivider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin: 70px 0 80px;
+}
+
+@media (max-width: 1024px) {
+  .categoriesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .categoriesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categoryCard {
+    padding: 20px;
+  }
+
+  .sectionTitle h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navArrows {
+    margin-left: auto;
+  }
+
+  .categoriesGrid {
+    gap: 20px;
+  }
+}

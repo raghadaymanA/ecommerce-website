@@ -1,0 +1,201 @@
+.footer {
+  background: #000;
+  color: #FAFAFA;
+  padding: 80px 20px 24px;
+  position: relative;
+  width: 100%;
+}
+
+.scrollToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #F5F5F5;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s;
+  z-index: 100;
+}
+
+.scrollToTop:hover {
+  background: #DB4444;
+  color: #fff;
+}
+
+.footerContent {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin-bottom: 60px;
+}
+
+.footerColumn h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  margin-bottom: 24px;
+}
+
+.footerColumn h4 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 24px;
+}
+
+.footerColumn p {
+  color: #FAFAFA;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+.footerColumn p.appSave {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 8px;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerColumn ul li {
+  margin-bottom: 16px;
+  color: #FAFAFA;
+}
+
+.footerColumn ul a {
+  color: #FAFAFA;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  transition: opacity 0.3s;
+}
+
+.footerColumn ul a:hover {
+  opacity: 0.7;
+}
+
+.subscribeForm {
+  display: flex;
+  margin-top: 16px;
+  border: 1.5px solid #FAFAFA;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.subscribeForm input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  color: #FAFAFA;
+  outline: none;
+  font-size: 16px;
+}
+
+.subscribeForm input::placeholder {
+  color: #FAFAFA;
+  opacity: 0.4;
+}
+
+.subscribeForm button {
+  background: transparent;
+  border: none;
+  color: #FAFAFA;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.subscribeForm button:hover {
+  opacity: 0.7;
+}
+
+.appDownloads {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+
+.qrCode {
+  width: 76px;
+  height: 76px;
+  border: 2px solid #fff;
+}
+
+.storeButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.storeButtons a {
+  display: block;
+  text-decoration: none;
+}
+
+.storeButtons img {
+  height: 36px;
+  width: auto;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.storeButtons img:hover {
+  opacity: 0.8;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.socialIcons svg {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.socialIcons svg:hover {
+  opacity: 0.7;
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255,255,255,0.4);
+  padding-top: 16px;
+  text-align: center;
+  color: #FAFAFA;
+  opacity: 0.4;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .footerContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footerContent {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

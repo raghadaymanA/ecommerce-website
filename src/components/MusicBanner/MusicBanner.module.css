@@ -1,0 +1,156 @@
+.musicBanner {
+  background: linear-gradient(90deg, #000 0%, #1a1a1a 100%);
+  color: #fafafa;
+  padding: 4vw 5vw;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4vw;
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto 70px auto;
+  box-sizing: border-box;
+}
+
+.musicBanner::before {
+  content: "";
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  background: rgba(217, 217, 217, 0.3);
+  filter: blur(200px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.musicContent {
+  flex: 1;
+  min-width: 260px;
+  max-width: 500px;
+  z-index: 1;
+  text-align: left;
+}
+
+.musicTag {
+  color: #00ff66;
+  font-size: clamp(14px, 1.4vw, 16px);
+  font-weight: 600;
+  margin-bottom: 2vw;
+  display: block;
+}
+
+.musicContent h2 {
+  font-size: clamp(24px, 3.4vw, 48px);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 2vw;
+  max-width: 100%;
+  word-break: keep-all;
+}
+
+.countdownCircles {
+  display: flex;
+  gap: 1.5vw;
+  margin-bottom: 2.5vw;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.circleItem {
+  background: #ffffff;
+  color: #000;
+  border-radius: 50%;
+  width: clamp(48px, 4vw, 62px);
+  height: clamp(48px, 4vw, 62px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.circleNumber {
+  font-size: clamp(12px, 1.2vw, 16px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.circleLabel {
+  font-size: clamp(9px, 0.9vw, 11px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.buyNowBtn {
+  background: #00ff66;
+  color: #fafafa;
+  border: none;
+  padding: 1vw 3vw;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: clamp(13px, 1.1vw, 16px);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.buyNowBtn:hover {
+  background: #00dd55;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.musicImage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  min-width: 200px;
+  max-width: 600px;
+}
+
+.musicImage img {
+  width: 100%;
+  max-width: clamp(220px, 35vw, 568px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 40px rgba(253, 254, 254, 0.2));
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .musicBanner {
+    flex-direction: column;
+    text-align: center;
+    gap: 6vw;
+  }
+
+  .musicContent {
+    max-width: 100%;
+ 
+  }
+
+  .musicImage {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .musicBanner {
+    width: 95%;
+    padding: 6vw 4vw;
+    gap: 5vw;
+  }
+
+  .musicImage img {
+    max-width: 75%;
+  }
+}

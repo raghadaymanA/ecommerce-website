@@ -1,0 +1,136 @@
+.bestSelling {
+  margin-top: 80px;
+  margin-bottom: 140px;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tag {
+  color: #DB4444;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tag::before {
+  content: '';
+  width: 20px;
+  height: 40px;
+  background: #DB4444;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.sectionTitle h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0.04em;
+}
+
+.viewAllBtnHeader {
+  background: #DB4444;
+  color: #FAFAFA;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.viewAllBtnHeader:hover {
+  background: #c23838;
+}
+
+.bestSellingContainer {
+  position: relative;
+}
+
+.productsScrollBest {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.productsScrollBest::-webkit-scrollbar {
+  display: none;
+}
+
+.productsScrollBest > div {
+  min-width: 250px;
+  flex-shrink: 0;
+}
+
+.scrollArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #F5F5F5;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.scrollArrow:hover {
+  background: #DB4444;
+  color: #fff;
+}
+
+.scrollArrow:focus {
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.scrollArrow svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 2.5;
+}
+
+.scrollArrowLeft {
+  left: -23px;
+}
+
+.scrollArrowRight {
+  right: -23px;
+}
+
+@media (max-width: 768px) {
+  .viewAllBtnHeader {
+    margin-left: auto;
+    padding: 12px 26px;
+  }
+}
